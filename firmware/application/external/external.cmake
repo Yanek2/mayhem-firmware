@@ -239,12 +239,12 @@ set(EXTCPPSRC
 	#waterfall designer
 	external/waterfall_designer/main.cpp
 	external/waterfall_designer/ui_waterfall_designer.cpp
-	
+
 	#tetra_detect
         external/tetra_detect/main.cpp
         external/tetra_detect/ui_tetra_detect.cpp
 
-	#detector_rx  168 byte
+        #detector_rx  168 byte
 	external/detector_rx/main.cpp
 	external/detector_rx/ui_detector_rx.cpp
 
@@ -313,10 +313,8 @@ set(EXTCPPSRC
 	external/morseradiotx/main.cpp
 	external/morseradiotx/ui_morse_radiotx.cpp
 
-	#keeloqtx
   	external/keeloqtx/main.cpp
   	external/keeloqtx/ui_keeloqtx.cpp
-
 	#rtty_rx
 	external/rtty_rx/main.cpp
 	external/rtty_rx/ui_rtty_rx.cpp
@@ -330,10 +328,6 @@ set(EXTCPPSRC
     #pocsag_tx
 	external/pocsag_tx/main.cpp
 	external/pocsag_tx/ui_pocsag_tx.cpp
-
-	#flex_tx
-	external/flex_tx/main.cpp
-	external/flex_tx/ui_flex_tx.cpp
 
 	#time_sink
 	external/time_sink/main.cpp
@@ -350,14 +344,6 @@ set(EXTCPPSRC
 	#p25_tx
 	external/p25_tx/main.cpp
 	external/p25_tx/ui_p25_tx.cpp
-
-	#two_tone_pager
-	external/two_tone_pager/main.cpp
-	external/two_tone_pager/ui_two_tone_pager.cpp
-
-	#two_tone_rx
-	external/two_tone_rx/main.cpp
-	external/two_tone_rx/ui_two_tone_rx.cpp 
 )
 
 set(EXTAPPLIST
@@ -417,7 +403,7 @@ set(EXTAPPLIST
 	scanner
 	level
 	gfxeq
-	waterfall_designer	
+	waterfall_designer
 	tetra_detect
 	detector_rx
 	fpv_detect
@@ -441,12 +427,9 @@ set(EXTAPPLIST
 	rtty_rx
 	rtty_tx
 	pocsag_tx
-	flex_tx
 	time_sink
 	kiss_tnc
 	p25_tx
-	two_tone_pager
-	two_tone_rx
 )
 
 # sdusb has type conflicts with PRALINE (HackRF Pro) - add only for non-PRALINE builds
