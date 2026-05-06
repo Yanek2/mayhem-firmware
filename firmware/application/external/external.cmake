@@ -239,6 +239,10 @@ set(EXTCPPSRC
 	#waterfall designer
 	external/waterfall_designer/main.cpp
 	external/waterfall_designer/ui_waterfall_designer.cpp
+	
+	#tetra_detect
+        external/tetra_detect/main.cpp
+        external/tetra_detect/ui_tetra_detect.cpp
 
 	#detector_rx  168 byte
 	external/detector_rx/main.cpp
@@ -413,7 +417,8 @@ set(EXTAPPLIST
 	scanner
 	level
 	gfxeq
-	waterfall_designer
+	waterfall_designer	
+	tetra_detect
 	detector_rx
 	fpv_detect
 	spaceinv
