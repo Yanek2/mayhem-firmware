@@ -240,7 +240,7 @@ set(EXTCPPSRC
 	external/waterfall_designer/main.cpp
 	external/waterfall_designer/ui_waterfall_designer.cpp
 	
-	#app_tetra_detect
+	#tetra_detect
         external/tetra_detect/main.cpp
         external/tetra_detect/ui_tetra_detect.cpp
 
@@ -418,7 +418,7 @@ set(EXTAPPLIST
 	level
 	gfxeq
 	waterfall_designer	
-	app_tetra_detect
+	tetra_detect
 	detector_rx
 	fpv_detect
 	spaceinv
