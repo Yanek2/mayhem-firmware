@@ -434,10 +434,9 @@ set(EXTAPPLIST
 
 # sdusb has type conflicts with PRALINE (HackRF Pro) - add only for non-PRALINE builds
 if(NOT BOARD STREQUAL "PRALINE")
-       list(APPEND EXTCPPSRC
-               external/sdusb/main.cpp
-               external/sdusb/ui_sd_over_usb.cpp
-       )
-       list(APPEND EXTAPPLIST sdusb)
+       #list(APPEND EXTCPPSRC
+       #        external/sdusb/main.cpp
+       #        external/sdusb/ui_sd_over_usb.cpp
+       #)
+       #list(APPEND EXTAPPLIST sdusb)
 endif()
-
