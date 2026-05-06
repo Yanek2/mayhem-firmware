@@ -104,10 +104,7 @@ for external_image_prefix in sys.argv[4:]:
 	external_application_image = read_image(himg)
 
 	#m4 image @ 0x44
-	chunk_data = external_application_image[m4_app_tag_header_position:m4_app_tag_header_position+4]	
-	if len(external_application_image) < m4_app_tag_header_position + 4:
-            print("Skipping {} - image too small".format(external_image_prefix))
-            continue
+	chunk_data = external_application_image[m4_app_tag_header_position:m4_app_tag_header_position+4]
 
 	# skip m4 if not set
 	if (chunk_data[0] == 0 and chunk_data[1] == 0 and chunk_data[2] == 0 and chunk_data[3] == 0):

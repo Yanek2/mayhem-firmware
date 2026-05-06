@@ -239,12 +239,12 @@ set(EXTCPPSRC
 	#waterfall designer
 	external/waterfall_designer/main.cpp
 	external/waterfall_designer/ui_waterfall_designer.cpp
-
+	
 	#tetra_detect
         external/tetra_detect/main.cpp
         external/tetra_detect/ui_tetra_detect.cpp
 
-        #detector_rx  168 byte
+	#detector_rx  168 byte
 	external/detector_rx/main.cpp
 	external/detector_rx/ui_detector_rx.cpp
 

@@ -74,6 +74,7 @@ MEMORY
     ram_external_app_level                 (rwx) : org = 0xADE10000, len = 32k
     ram_external_app_gfxeq                 (rwx) : org = 0xADE20000, len = 32k
     ram_external_app_noaaapt_rx            (rwx) : org = 0xADE30000, len = 32k
+    ram_external_app_tetra_detect          (rwx) : org = 0xADE35000, len = 32k
     ram_external_app_detector_rx           (rwx) : org = 0xADE40000, len = 32k
     ram_external_app_dinogame              (rwx) : org = 0xADE50000, len = 32k
     ram_external_app_spaceinv              (rwx) : org = 0xADE60000, len = 32k
@@ -428,6 +429,12 @@ SECTIONS
         *(*ui*external_app*waterfall_designer*);
     } > ram_external_app_waterfall_designer
 
+    .external_app_tetra_detect : ALIGN(4) SUBALIGN(4)
+    {
+        KEEP(*(.external_app.app_tetra_detect.application_information));
+        *(*ui*external_app*tetra_detect*);
+    } > ram_external_app_tetra_detect
+    
     .external_app_detector_rx : ALIGN(4) SUBALIGN(4)
     {
         KEEP(*(.external_app.app_detector_rx.application_information));
