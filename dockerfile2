@@ -1,0 +1,6 @@
+﻿FROM ubuntu:22.04
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update && apt-get install -y wget tar cmake python3 python3-pip bzip2 lz4 curl git make gcc g++ && rm -rf /var/lib/apt/lists/*
+RUN wget -q "https://developer.arm.com/-/media/Files/downloads/gnu/13.2.rel1/binrel/arm-gnu-toolchain-13.2.rel1-x86_64-arm-none-eabi.tar.xz" -O /tmp/gcc-arm.tar.xz && mkdir -p /opt/armbin && tar --strip=1 -xf /tmp/gcc-arm.tar.xz -C /opt/armbin && rm /tmp/gcc-arm.tar.xz
+ENV PATH=/opt/armbin/bin:
+WORKDIR /havoc
