@@ -770,7 +770,7 @@ set(MODE_CPPSRC
 )
 # sd_over_usb has type conflicts with PRALINE (HackRF Pro) - disable for now
 if(NOT BOARD STREQUAL "PRALINE")
-DeclareTargets(PUSB sd_over_usb)
+#DeclareTargets(PUSB sd_over_usb)
 endif()
 
 
