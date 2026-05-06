@@ -418,7 +418,7 @@ set(EXTAPPLIST
 	level
 	gfxeq
 	waterfall_designer	
-	tetra_detect
+	app_tetra_detect
 	detector_rx
 	fpv_detect
 	spaceinv
