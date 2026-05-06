@@ -728,6 +728,7 @@ set(MODE_CPPSRC
 )
 DeclareTargets(PTSK time_sink)
 
+if(FALSE)
 set(MODE_CPPSRC
 	sd_over_usb/proc_sd_over_usb.cpp
 
@@ -768,10 +769,8 @@ set(MODE_CPPSRC
 	${HACKRF_PATH}/firmware/libopencm3/lib/lpc43xx/timer.c
 	${HACKRF_PATH}/firmware/libopencm3/lib/lpc43xx/i2c.c
 )
-# sd_over_usb has type conflicts with PRALINE (HackRF Pro) - disable for now
-if(NOT BOARD STREQUAL "PRALINE")
-#DeclareTargets(PUSB sd_over_usb)
 endif()
+# sd_over_usb disabled for v2.4.0 compatibility
 
 
 ### HackRF "factory" firmware
