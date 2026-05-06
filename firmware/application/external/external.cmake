@@ -240,7 +240,7 @@ set(EXTCPPSRC
 	external/waterfall_designer/main.cpp
 	external/waterfall_designer/ui_waterfall_designer.cpp
 	
-	#tetra_detect
+	#app_tetra_detect
         external/tetra_detect/main.cpp
         external/tetra_detect/ui_tetra_detect.cpp
 

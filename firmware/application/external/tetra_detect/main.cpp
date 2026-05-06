@@ -10,7 +10,7 @@ void initialize_app(ui::NavigationView& nav) {
 }  // namespace ui::external_app::tetra_detect
 
 extern "C" {
-__attribute__((section(".external_app_tetra_detect.application_information"), used))
+__attribute__((section(".external_app.app_tetra_detect.application_information"), used))
 application_information_t _application_information_tetra_detect = {
     /*.memory_location = */ (uint8_t*)0x00000000,
     /*.externalAppEntry = */ ui::external_app::tetra_detect::initialize_app,
