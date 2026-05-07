@@ -26,7 +26,7 @@ application_information_t _application_information_tetra_detect = {
     /*.icon_color = */ ui::Color::green().v,
     /*.menu_location = */ app_location_t::RX,
     /*.desired_menu_position = */ -1,
-    /*.m4_app_tag = */ {'P', 'W', 'F', 'M'},
+    /*.m4_app_tag = */ {'P', 'C', 'A', 'P'},
     /*.m4_app_offset = */ 0x00000000,
 };
 }
