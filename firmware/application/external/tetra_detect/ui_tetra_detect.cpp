@@ -19,14 +19,13 @@ size_t TetraDetectView::init_radio() {
     baseband::run_image(portapack::spi_flash::image_tag_capture);
     receiver_model.set_modulation(ReceiverModel::Mode::Capture);
     baseband::set_sample_rate(TETRA_BW, get_oversample_rate(TETRA_BW));
-
-    auto sr = get_actual_sample_rate(TETRA_BW);
-    receiver_model.set_sampling_rate(sr);
-    receiver_model.set_baseband_bandwidth(filter_bandwidth_for_sampling_rate(sr));
+    auto actual_sampling_rate = get_actual_sample_rate(TETRA_BW);
+    receiver_model.set_sampling_rate(actual_sampling_rate);
+    receiver_model.set_baseband_bandwidth(filter_bandwidth_for_sampling_rate(actual_sampling_rate));
 
     audio::set_rate(audio::Rate::Hz_24000);
     audio::output::start();
-    receiver_model.set_headphone_volume(receiver_model.headphone_volume());
+    receiver_model.set_headphone_volume(receiver_model.headphone_volume());  // WM8731 hack.
     receiver_model.enable();
     return 0;
 }
